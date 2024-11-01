@@ -12,7 +12,7 @@ body {
     min-height: 100vh;
     background-color: #e0f7fa;
     font-family: 'Montserrat', sans-serif;
-    overflow: auto; /* Додаємо прокрутку */
+    overflow: auto;
     font-size: 23px;
 }
 
@@ -25,19 +25,19 @@ body {
         "left-column center-text books-clock"
         "student bottom-text bottom-text";
     gap: 30px;
-    max-width: 1200px; /* Збільшуємо ширину */
+    max-width: 1200px;
     width: 100%;
-    max-height: 1200px; /* Додаємо обмеження по висоті */
+    max-height: 1200px; 
     padding: 50px;
     background-color: #e0f7fa;
-    overflow: auto; /* Додаємо прокрутку при необхідності */
+    overflow: auto; 
 }
 
 .left-column {
     grid-area: left-column;
     background-color: #4fc3f7;
     color: #ffffff;
-    padding: 30px; /* Збільшуємо відступ */
+    padding: 30px; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,10 +46,10 @@ body {
 .left-column h2 {
     font-weight: 700;
     margin-bottom: 30px;
-    font-size: 32px; /* Збільшуємо розмір шрифту */
+    font-size: 32px; 
 }
 
-.backpack {
+.img1 {
     grid-area: backpack;
     background-color: #e0f7fa;
     display: flex;
@@ -58,7 +58,7 @@ body {
     padding: 10px;
 }
 
-.girl-books {
+.img2 {
     grid-area: girl-books;
     background-color: #e0f7fa;
     display: flex;
@@ -76,15 +76,15 @@ body {
     border: 2px solid #0277bd;
     padding: 30px;
     text-align: center;
-    transition: box-shadow 0.3s ease; /* Добавляем плавный переход */
+    transition: box-shadow 0.3s ease; 
 }
 
 .center-text:hover {
-    box-shadow: 0 0 20px rgba(2, 119, 189, 0.6); /* Голубое свечение */
-    border-color: #01579b; /* Меняем цвет рамки на более темный при наведении */
+    box-shadow: 0 0 20px rgba(2, 119, 189, 0.6); 
+    border-color: #01579b; 
 }
 
-.books-clock {
+.img3 {
     grid-area: books-clock;
     background-color: #e0f7fa;
     display: flex;
@@ -93,7 +93,7 @@ body {
     padding: 10px;
 }
 
-.student {
+.img4 {
     grid-area: student;
     display: flex;
     align-items: center;
@@ -103,33 +103,32 @@ body {
 
 .left-column h2,
 .left-column p {
-    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход для движения и цвета */
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .left-column:hover h2 {
-    transform: translateX(10px); /* Двигаем текст немного вправо при наведении */
-    color: #fff59d; /* Меняем цвет на светло-желтый */
+    transform: translateX(10px); 
+    color: #fff59d; 
 }
 
 .left-column:hover p {
-    transform: translateX(10px); /* Двигаем текст немного вправо при наведении */
-    color: #fffde7; /* Светло-желтый для параграфа */
+    transform: translateX(10px); 
+    color: #fffde7;
 }
 
-/* Нижний блок - анимация текста */
 .bottom-text h2,
 .bottom-text p {
-    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход для движения и цвета */
+    transition: transform 0.3s ease, color 0.3s ease; 
 }
 
 .bottom-text:hover h2 {
-    transform: translateY(-10px); /* Поднимаем текст при наведении */
-    color: #fff59d; /* Светло-желтый цвет */
+    transform: translateY(-10px); 
+    color: #fff59d; 
 }
 
 .bottom-text:hover p {
-    transform: translateY(-10px); /* Поднимаем текст при наведении */
-    color: #fffde7; /* Светло-желтый для параграфа *//
+    transform: translateY(-10px); 
+    color: #fffde7; 
 }
 
 .bottom-text {
@@ -140,39 +139,39 @@ body {
     padding: 20px;
     flex-direction: column;
     justify-content: center;
-    align-items: stretch; /* Додаємо це для вирівнювання по ширині */
-    width: 100%; /* Додаємо це, щоб задати повну ширину */
+    align-items: stretch;
+    width: 100%; 
 }
 
 .backpack img, .girl-books img, .books-clock img, .student img {
     width: 100%;
-    height: 300px; /* Збільшуємо висоту для кращого масштабу */
+    height: 300px; 
     object-fit: cover;
 }
 
 .backpack, .girl-books, .books-clock, .student {
-    padding: 0; /* Прибираємо внутрішні відступи в контейнерах */
+    padding: 0; 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .bottom-text h2 {
-    font-size: 32px; /* Збільшуємо розмір шрифту */
+    font-size: 32px; 
     margin-bottom: 10px;
 }
 
 .bottom-text p {
     margin: 10px 0 20px;
-    background-color: #4fc3f7; /* Ніжно-синій фон */
-     color: #ffffff; /* Білий текст */
+    background-color: #4fc3f7; 
+     color: #ffffff; 
     
 }
 
 button {
-    background-color: #ffffff; /* Білий фон кнопки */
-    color: #0277bd; /* Насичений синій текст кнопки */
-    border: 2px solid #0277bd; /* Насичена синя рамка */
+    background-color: #ffffff; 
+    color: #0277bd;
+    border: 2px solid #0277bd; 
     padding: 10px 20px;
     cursor: pointer;
     align-self: flex-start;
@@ -181,6 +180,26 @@ button {
 }
 
 button:hover {
-    background-color: #0277bd; /* Насичений синій фон при наведенні */
-    color: #ffffff; /* Білий текст при наведенні */
+    background-color: #0277bd; 
+    color: #ffffff; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas:
+            "left-column"
+            "backpack"
+            "girl-books"
+            "center-text"
+            "books-clock"
+            "student"
+            "bottom-text";
+        gap: 20px;
+    }
+
+    .backpack img, .girl-books img, .books-clock img, .student img {
+        height: auto; 
+    }
 }
