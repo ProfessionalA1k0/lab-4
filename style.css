@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #e0f7fa;
+    font-family: 'Montserrat', sans-serif;
+    overflow: auto; /* Додаємо прокрутку */
+    font-size: 23px;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+        "left-column backpack girl-books"
+        "left-column center-text books-clock"
+        "student bottom-text bottom-text";
+    gap: 30px;
+    max-width: 1200px; /* Збільшуємо ширину */
+    width: 100%;
+    max-height: 1200px; /* Додаємо обмеження по висоті */
+    padding: 50px;
+    background-color: #e0f7fa;
+    overflow: auto; /* Додаємо прокрутку при необхідності */
+}
+
+.left-column {
+    grid-area: left-column;
+    background-color: #4fc3f7;
+    color: #ffffff;
+    padding: 30px; /* Збільшуємо відступ */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.left-column h2 {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 32px; /* Збільшуємо розмір шрифту */
+}
+
+.backpack {
+    grid-area: backpack;
+    background-color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.girl-books {
+    grid-area: girl-books;
+    background-color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.center-text {
+    grid-area: center-text;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #0277bd;
+    border: 2px solid #0277bd;
+    padding: 30px;
+    text-align: center;
+    transition: box-shadow 0.3s ease; /* Добавляем плавный переход */
+}
+
+.center-text:hover {
+    box-shadow: 0 0 20px rgba(2, 119, 189, 0.6); /* Голубое свечение */
+    border-color: #01579b; /* Меняем цвет рамки на более темный при наведении */
+}
+
+.books-clock {
+    grid-area: books-clock;
+    background-color: #e0f7fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.student {
+    grid-area: student;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.left-column h2,
+.left-column p {
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход для движения и цвета */
+}
+
+.left-column:hover h2 {
+    transform: translateX(10px); /* Двигаем текст немного вправо при наведении */
+    color: #fff59d; /* Меняем цвет на светло-желтый */
+}
+
+.left-column:hover p {
+    transform: translateX(10px); /* Двигаем текст немного вправо при наведении */
+    color: #fffde7; /* Светло-желтый для параграфа */
+}
+
+/* Нижний блок - анимация текста */
+.bottom-text h2,
+.bottom-text p {
+    transition: transform 0.3s ease, color 0.3s ease; /* Плавный переход для движения и цвета */
+}
+
+.bottom-text:hover h2 {
+    transform: translateY(-10px); /* Поднимаем текст при наведении */
+    color: #fff59d; /* Светло-желтый цвет */
+}
+
+.bottom-text:hover p {
+    transform: translateY(-10px); /* Поднимаем текст при наведении */
+    color: #fffde7; /* Светло-желтый для параграфа *//
+}
+
+.bottom-text {
+    grid-area: bottom-text;
+    background-color: #4fc3f7;
+    color: #ffffff;
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch; /* Додаємо це для вирівнювання по ширині */
+    width: 100%; /* Додаємо це, щоб задати повну ширину */
+}
+
+.backpack img, .girl-books img, .books-clock img, .student img {
+    width: 100%;
+    height: 300px; /* Збільшуємо висоту для кращого масштабу */
+    object-fit: cover;
+}
+
+.backpack, .girl-books, .books-clock, .student {
+    padding: 0; /* Прибираємо внутрішні відступи в контейнерах */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-text h2 {
+    font-size: 32px; /* Збільшуємо розмір шрифту */
+    margin-bottom: 10px;
+}
+
+.bottom-text p {
+    margin: 10px 0 20px;
+    background-color: #4fc3f7; /* Ніжно-синій фон */
+     color: #ffffff; /* Білий текст */
+    
+}
+
+button {
+    background-color: #ffffff; /* Білий фон кнопки */
+    color: #0277bd; /* Насичений синій текст кнопки */
+    border: 2px solid #0277bd; /* Насичена синя рамка */
+    padding: 10px 20px;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #0277bd; /* Насичений синій фон при наведенні */
+    color: #ffffff; /* Білий текст при наведенні */
+}
