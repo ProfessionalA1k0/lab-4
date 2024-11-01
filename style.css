@@ -21,9 +21,9 @@ body {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-        "left-column backpack girl-books"
-        "left-column center-text books-clock"
-        "student bottom-text bottom-text";
+        "left-column img1 img2"
+        "left-column center-text img3"
+        "img4 bottom-text bottom-text";
     gap: 30px;
     max-width: 1200px;
     width: 100%;
